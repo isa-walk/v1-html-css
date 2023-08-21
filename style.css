@@ -187,4 +187,33 @@ svg {
     padding-block: var(--size-400);
 }
 
+
+.container {
+    --max-width: 1110px;
+    --padding: 1rem;
+
+    width: min(var(--max-width), 100% - (var(--padding) * 2));
+    margin-inline: auto;
+}
+
+.even-columns {
+    display: grid;
+    gap: 1rem;
+}
+
+@media (min-width: 50em) {
+    .even-columns {
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+    }
+}
+
+
 /* General styling */
+
+body {
+    font-size: --var(--fs-body);
+    font-family: var(--ff-body);
+    color: var(--clr-neutral-400);
+}
+
